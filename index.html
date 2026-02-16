@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="tailwind.init.css">
+    <title>To Do App</title>
+    <style>
+        .task-item{
+            display: flex;
+            justify-content: space-between;  
+            margin:20px auto 20px;
+            width: 400px;
+            
+        }
+        .delete{
+            color:red;
+            cursor: pointer;
+        }
+        .completed{
+            text-decoration: line-through;
+            
+        }
+    </style>
+</head>
+<body class="font-inter">
+    <section class="w-2xl mx-auto my-52 p-6 shadow-lg shadow-[#833AB4] rounded-xl">
+        <div class="flex justify-between">
+            <h1 class="text-3xl font-bold bg-gradient-to-r from-[#833AB4] to-[#FD1D1D] bg-clip-text text-transparent">To-Do Task <i class="fa-solid fa-list-check"></i></h1>
+           <div class="flex items-center gap-1"><p class="bg-gradient-to-r from-[#833AB4] to-[#FD1D1D] bg-clip-text text-transparent text-lg font-bold">Total Task:</p> <span id="count" class="text-lg text-[#FD1D1D]">0</span></div> 
+        </div>
+        <div class="flex justify-center my-8 gap-3">
+            <input id="task-input" class="border border-gray-200 p-2 rounded-lg" type="text" placeholder="Enter your task" required>
+            <button id="add-task" class="bg-gradient-to-r from-[#833AB4] to-[#FD1D1D] text-lg font-medium rounded-lg p-2 text-white">Add Task</button>
+        </div>
+        <div id="task-container">
+            
+        </div>
+        
+    </section>
+    <script src="./script.js"></script>
+</body>
+</html>
