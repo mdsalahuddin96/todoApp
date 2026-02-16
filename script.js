@@ -3,7 +3,8 @@ const taskInput=document.getElementById('task-input');
 const addTaskBtn=document.getElementById('add-task');
 const countElm=document.getElementById('count');
 const taskItems=document.getElementsByClassName('task-item');
-addTaskBtn.addEventListener('click',(event)=>{
+
+function addTask(event){
     if(taskInput.value.trim()==""){
         alert("Enter a Task");
         return;
@@ -20,6 +21,14 @@ addTaskBtn.addEventListener('click',(event)=>{
     </div>`)
     taskInput.value="";
     updateTaskCount();
+}
+addTaskBtn.addEventListener('click',(e)=>{
+    addTask(e);
+})
+taskInput.addEventListener('keydown',(e)=>{
+    if(e.code=='Enter'){
+        addTask(e);
+    }
 })
 // this code for mark complete task and delete task
 taskContainer.addEventListener('click',(event)=>{
